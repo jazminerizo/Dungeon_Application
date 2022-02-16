@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonLibrary", "DungeonLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterLibrary", "MonsterLibrary\MonsterLibrary.csproj", "{A3FB9DA3-70C0-404D-A810-374FAB4085A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerLibrary", "PlayerLibrary\PlayerLibrary.csproj", "{0EFA48AB-6B9D-4A1C-820F-0777819DD9C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerLibrary", "PlayerLibrary\PlayerLibrary.csproj", "{EE85EDAF-9DFE-4EAB-9B3D-A6803EE8339F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{A3FB9DA3-70C0-404D-A810-374FAB4085A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3FB9DA3-70C0-404D-A810-374FAB4085A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3FB9DA3-70C0-404D-A810-374FAB4085A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0EFA48AB-6B9D-4A1C-820F-0777819DD9C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0EFA48AB-6B9D-4A1C-820F-0777819DD9C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0EFA48AB-6B9D-4A1C-820F-0777819DD9C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0EFA48AB-6B9D-4A1C-820F-0777819DD9C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE85EDAF-9DFE-4EAB-9B3D-A6803EE8339F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE85EDAF-9DFE-4EAB-9B3D-A6803EE8339F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE85EDAF-9DFE-4EAB-9B3D-A6803EE8339F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE85EDAF-9DFE-4EAB-9B3D-A6803EE8339F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

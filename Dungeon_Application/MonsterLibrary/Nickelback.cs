@@ -7,7 +7,7 @@ using DungeonLibrary;
 
 namespace MonsterLibrary
 {
-    class Nickelback
+    class Nickelback : Monster
     {
     }
 }
