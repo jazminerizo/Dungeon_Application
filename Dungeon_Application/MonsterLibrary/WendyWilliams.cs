@@ -21,7 +21,7 @@ namespace MonsterLibrary
 
 
         //CONSTRUCTORS
-        public WendyWilliams(string name, int life, int maxLife, int hitChance, int block, int minDamage, int maxDamage, string description, bool isGossiping, /*bool isFinallyShuttingUp*/)
+        public WendyWilliams(string name, int life, int maxLife, int hitChance, int block, int minDamage, int maxDamage, string description, bool isGossiping /*bool isFinallyShuttingUp*/)
             : base(name, life, maxLife, hitChance, block, minDamage, maxDamage, description)
         {
             IsGossiping = isGossiping;

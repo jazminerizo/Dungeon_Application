@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DungeonLibrary;
+using MonsterLibrary;
 
 
 namespace Dungeon_Application
@@ -17,35 +18,45 @@ namespace Dungeon_Application
 
             int score = 0;
 
-            //TODO Create a Player object
-            //Need to learn about custom classes first
 
+            
             Weapon wigSnatcher = new Weapon(1, 8, "Wig Snatcher", 10);
 
-            Player player = new Player("Pikachu", 80, 6, 50, 50, Race.ElectricPokemon, wigSnatcher);
+            Player player = new Player("Pikachu", 5, 3, 7, 7, Race.ElectricPokemon, wigSnatcher);
 
 
+            //Console.Clear();\
             bool exit = false;
 
             do
             {
                 Console.WriteLine(GetRoom());
 
-                //TODO Create a Monster object in the room
-                //Need to learn about custom classes, use them
-                //to create numerous monsters, then select one
-                //at random
+                WendyWilliams wW = new WendyWilliams();
 
-                Console.WriteLine("Choose your player");
+                HilaryClinton hC = new HilaryClinton();
+
+                TaylorSwift tS = new TaylorSwift();
+
+                Monster[] monsters = { wW, hC, tS };
+
+                Random rand = new Random();
+
+                int randomMonster = rand.Next(monsters.Length);
+
+                Monster monster = monsters[randomMonster];
+
+                Console.WriteLine("\nIn this room you see the monster " + monster.Name);
 
 
 
-
+                //bool exit1 = false;
                 bool reload = false;
+
 
                 
 
-                    do
+                do
                 {
 
                     #region MENU
@@ -57,20 +68,39 @@ namespace Dungeon_Application
                         "M) Monster Info\n" +
                         "X) Exit\n");
 
-                    ConsoleKey userChoice = Console.ReadKey(true).Key;
+                    ConsoleKey userChoice3 = Console.ReadKey(true).Key;
                     //Executes upon input without having to hit Enter
 
                     //Clear the console
                     Console.Clear();
 
                     //Build out the switch for userChoice
-                    switch (userChoice)
+                    switch (userChoice3)
                     {
                         //Attack
                         case ConsoleKey.A:
-                            //TODO Need to handle combat
 
-                            //TODO Need to handle if the player wins/loses
+                            Combat.DoBattle(player, monster);
+
+                            if (monster.Life <= 0)
+                            {
+                                //It is dead!
+                                //You could put logic here to have the player
+                                //get items, recover some life, or some other 
+                                //similar bonus for defeating the monster
+
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.WriteLine("\nYou killed {0}!\n", monster.Name);
+                                Console.ResetColor();
+                                reload = true;
+                                //We now want to get a new room
+                                //Because reload is true, we will exit
+                                //the menu loop and return to the top of 
+                                //the gameplay loop. Once we loop back there,
+                                //our code generates a new room using the GetRoom()
+                                score++;
+                            }
+
 
                             break;
 
@@ -80,7 +110,10 @@ namespace Dungeon_Application
 
                             Console.WriteLine("Run away!");
 
-                            //TODO Monster gets an attack of opportunity
+                            Console.WriteLine($"{monster.Name} attacks you as you flee!");
+                            Combat.DoAttack(monster, player); //Attack of opportunity
+                            Console.WriteLine();
+                            reload = true;
 
                             break;
 
@@ -88,7 +121,10 @@ namespace Dungeon_Application
 
                         case ConsoleKey.P:
 
-                            //TODO Need to display Player's Info/stats
+                            Console.WriteLine("Player Info");
+
+                            Console.WriteLine(player);
+                            Console.WriteLine("Monsters defeated: " + score);
 
                             break;
 
@@ -96,7 +132,8 @@ namespace Dungeon_Application
 
                         case ConsoleKey.M:
 
-                            //TODO Need to display Monster's Info/stats
+                            Console.WriteLine("Monster Info");
+                            Console.WriteLine(monster);
 
                             break;
 
@@ -114,7 +151,7 @@ namespace Dungeon_Application
 
                         default:
 
-                            Console.WriteLine("So that's what we do now? Press any ol' button? Whose mans is this??");
+                            Console.WriteLine("Invalid inoput. Try again, sweetie.");
 
                             break;
                     }
@@ -133,9 +170,10 @@ namespace Dungeon_Application
 
                 } while (!reload && !exit);
 
+            } while (!exit);
 
+            //While exit is NOT TRUE, keep looping
 
-            } while (!exit); //While exit is NOT TRUE, keep looping
 
 
             //Output the player's final score
@@ -152,7 +190,7 @@ namespace Dungeon_Application
                 "The room is dark and musty with the smell of Amy Schumer's career... yuck!",
                 "You enter a room where Miley Cirus is twerking and gyrating on a ginormous teddy bear.",
                 "You arrive in a rainbow room filled with multi colored balloons, confetti on the ground, glitter on the walls, and Tekashi 6ix9ine playfully jumping on the bed. Enjoy!",
-                
+
             };
 
             Random rand = new Random();
@@ -170,3 +208,31 @@ namespace Dungeon_Application
 
 
 }//End Namespace
+
+
+
+
+
+
+//Console.WriteLine("\nChoose your weapon\n" +
+//    "1) Famous Weapon\n" +
+//    "2) Wig Snatcher\n");
+
+//string userChoice1 = Console.ReadLine().ToUpper();
+
+//Console.Clear();
+
+//switch (userChoice1)
+//{
+//    case "1":
+//        Console.WriteLine("Famous Weapon");
+
+//        break;
+//    case "2":
+//        Console.WriteLine("Wig Snatcher");
+//        Console.ReadLine();
+//        break;
+//    default:
+//        Console.WriteLine("Invalid input. Please try again. ");
+//        break;
+//}

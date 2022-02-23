@@ -5,15 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using DungeonLibrary;
 
-
 namespace PlayerLibrary
 {
-    public class Pikachu : Player
-    {
-        //FIELDS
-        private bool _isGeneratingElectricity;
+    //public class Pikachu : Player
+    //{
 
-        //PROPERTIES
-        public bool IsGeneratingElectricity { get; set; }
-    }
+    //}
 }

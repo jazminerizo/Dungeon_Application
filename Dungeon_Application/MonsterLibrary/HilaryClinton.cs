@@ -7,45 +7,45 @@ using DungeonLibrary;
 
 namespace MonsterLibrary
 {
-    public class AmySchumer : Monster
+    public class HilaryClinton : Monster
     {
         //FIELDS
-        private bool _isSurprisinglyFunny;
+        //private bool _isSurprisinglyFunny;
         //PROPERTIES
 
-        public bool IsSurprisinglyFunny { get; set;  }
+        public bool IsWarPlanning { get; set;  }
 
         //CONSTRUCTORS
-        public AmySchumer(string name, int life, int maxLife, int hitChance, int block, int minDamage, int maxDamage, string description, bool isSurprisinglyFunny)
+        public HilaryClinton(string name, int life, int maxLife, int hitChance, int block, int minDamage, int maxDamage, string description, bool isWarPlanning)
             : base(name, life, maxLife, hitChance, block, minDamage, maxDamage, description)
         {
-            IsSurprisinglyFunny = isSurprisinglyFunny;
+            IsWarPlanning = isWarPlanning;
         }
 
-        public AmySchumer()
+        public HilaryClinton()
         {
             //Set max values first
             MaxLife = 6;
             MaxDamage = 3;
-            Name = "Amy Schumer";
+            Name = "Hilary Clinton";
             Life = 6;
             HitChance = 20;
             Block = 20;
             MinDamage = 1;
-            Description = "There she goes, making lame jokes again...";
-            IsSurprisinglyFunny = false;
+            Description = "There she goes, planning a war again...";
+            IsWarPlanning = false;
         }
 
         public override string ToString()
         {
-            return base.ToString() + (IsSurprisinglyFunny ? "You laughed when she told a joke!" : "There she goes, making lame jokes again...");
+            return base.ToString() + (IsWarPlanning ? "She's planning a war, stop her!" : "No filthy plans this time");
         }
 
         public override int CalcBlock()
         {
             int calculatedBlock = Block;
 
-            if (IsSurprisinglyFunny)
+            if (IsWarPlanning)
             {
                 calculatedBlock += calculatedBlock / 2;
             }

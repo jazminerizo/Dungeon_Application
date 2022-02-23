@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AmySchumer.cs" />
-    <Compile Include="Nickelback.cs" />
+    <Compile Include="HilaryClinton.cs" />
+    <Compile Include="TaylorSwift.cs" />
     <Compile Include="WendyWilliams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
