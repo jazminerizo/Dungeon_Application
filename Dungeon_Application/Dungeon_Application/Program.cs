@@ -188,7 +188,7 @@ namespace Dungeon_Application
             string[] rooms =
             {
                 "The room is dark and musty with the smell of Amy Schumer's career... yuck!",
-                "You enter a room where Miley Cirus is twerking and gyrating on a ginormous teddy bear.",
+                "You enter a room where Miley Cirus is gyrating by a ginormous teddy bear.",
                 "You arrive in a rainbow room filled with multi colored balloons, confetti on the ground, glitter on the walls, and Tekashi 6ix9ine playfully jumping on the bed. Enjoy!",
 
             };

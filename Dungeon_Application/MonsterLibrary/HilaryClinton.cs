@@ -38,7 +38,7 @@ namespace MonsterLibrary
 
         public override string ToString()
         {
-            return base.ToString() + (IsWarPlanning ? "She's planning a war, stop her!" : "No filthy plans this time");
+            return base.ToString() + (IsWarPlanning ? "She's planning a war, stop her!" : "No filthy war planning this time. Now is your chance!");
         }
 
         public override int CalcBlock()

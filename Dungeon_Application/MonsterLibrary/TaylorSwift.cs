@@ -46,7 +46,7 @@ namespace MonsterLibrary
         {
             return string.Format("{0}\n{1}",
                 base.ToString(),
-                HourChangeBack.Hour < 6 || HourChangeBack.Hour > 18 ? "It looks strong and angry." : "It looks weak and pathetic in the daylight.");
+                HourChangeBack.Hour < 6 || HourChangeBack.Hour > 18 ? "Her screeching is powerful! She must be going through a breakup again!" : "She's quiet, not making music, and back with John Mayor. Now's your chance!");
         }
     }
 }

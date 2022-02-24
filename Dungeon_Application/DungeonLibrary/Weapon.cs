@@ -44,60 +44,47 @@ namespace DungeonLibrary
             get { return _minDamage; }
             set
             {
-                //Shouldn't be more than the MaxDamage
-                //shouldn't be less than 1
+                
                 if (value > 0 && value <= MaxDamage)
                 {
-                    //This follows the guidelines above, so go ahead and assign
-                    //the field the value that was provided
+                    
                     _minDamage = value;
                 }
                 else
                 {
-                    //Tried to set the value outside of the ranges we deemed appropriate
-                    //Therefor, default the value to 1
+                    
                     _minDamage = 1;
                 }
             }
         }
 
-        //CONSTRUCTORS
-        //Create a fully qualified constructor (FQCTOR)
+        
+        //(FQCTOR)
 
         public Weapon(int minDamage, int maxDamage, string name, int bonusHitChance)
         {
-            //Here, the PROPERTIES are being assigned the value of the PARAMETERS
-            //When we use the constructor to create a Weapon object, we MUST provide
-            //the values listed in the parentheses.
+            
 
 
-            //If you have ANY properties that have business rules
-            //that are based off of any OTHER properties...
-            //Set the other properties FIRST
+           
             MaxDamage = maxDamage;
-            //Since MinDamage has business rules that depend on
-            //the value of MaxDamage, we MUST set MaxDamage before
-            //MinDamage.
+           
             MinDamage = minDamage;
             Name = name;
             BonusHitChance = bonusHitChance;
             
         }
 
-        //NO DEFAULT CONSTRUCTOR! We do not want anyone to make
-        //a blank weapon that is missing any of the info related 
-        //to that weapon.
+        
 
 
-        //METHODS
-        //Since DungeonLibrary.Weapon is probably NOT what we want
-        //printed to the screen, we will need to override the ToString()
+        
         public override string ToString()
         {
             //return base.ToString();
 
             return string.Format("{0}\t{1} to {2} Damage\n" +
-                "Bonus Hit: {3}%\t{4}",
+                "Bonus Hit: {3}%\t",
                 Name,
                 MinDamage,
                 MaxDamage,

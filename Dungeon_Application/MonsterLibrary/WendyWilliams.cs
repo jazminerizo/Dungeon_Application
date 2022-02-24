@@ -46,7 +46,7 @@ namespace MonsterLibrary
         //METHODS
         public override string ToString()
         {
-            return base.ToString() + (IsGossiping ? "She's gossiping aggain..." : "Finally! She shuts up!...");
+            return base.ToString() + (IsGossiping ? "She's powerfully gossiping again!" : "Finally! She's quiet, Now is your chance!");
         }
 
         public override int CalcBlock()
