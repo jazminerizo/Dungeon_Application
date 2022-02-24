@@ -69,35 +69,28 @@ namespace Dungeon_Application
                         "X) Exit\n");
 
                     ConsoleKey userChoice3 = Console.ReadKey(true).Key;
-                    //Executes upon input without having to hit Enter
+                    
 
-                    //Clear the console
+                    
                     Console.Clear();
 
-                    //Build out the switch for userChoice
+                    
                     switch (userChoice3)
                     {
-                        //Attack
+                        
                         case ConsoleKey.A:
 
                             Combat.DoBattle(player, monster);
 
                             if (monster.Life <= 0)
                             {
-                                //It is dead!
-                                //You could put logic here to have the player
-                                //get items, recover some life, or some other 
-                                //similar bonus for defeating the monster
+                               
 
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 Console.WriteLine("\nYou killed {0}!\n", monster.Name);
                                 Console.ResetColor();
                                 reload = true;
-                                //We now want to get a new room
-                                //Because reload is true, we will exit
-                                //the menu loop and return to the top of 
-                                //the gameplay loop. Once we loop back there,
-                                //our code generates a new room using the GetRoom()
+                                
                                 score++;
                             }
 
@@ -142,7 +135,7 @@ namespace Dungeon_Application
                         case ConsoleKey.X:
                         case ConsoleKey.E:
 
-                            Console.WriteLine("No one likes a quitter...");
+                            Console.WriteLine("QUITTER...");
 
                             exit = true;
 
@@ -151,7 +144,7 @@ namespace Dungeon_Application
 
                         default:
 
-                            Console.WriteLine("Invalid inoput. Try again, sweetie.");
+                            Console.WriteLine("Invalid input. Try again, sweetie.");
 
                             break;
                     }
@@ -187,7 +180,7 @@ namespace Dungeon_Application
         {
             string[] rooms =
             {
-                "The room is dark and musty with the smell of Amy Schumer's career... yuck!",
+                "The room is dark and musty with the foul smell of Amy Schumer's career... yuck!",
                 "You enter a room where Miley Cirus is gyrating by a ginormous teddy bear.",
                 "You arrive in a rainbow room filled with multi colored balloons, confetti on the ground, glitter on the walls, and Tekashi 6ix9ine playfully jumping on the bed. Enjoy!",
 
