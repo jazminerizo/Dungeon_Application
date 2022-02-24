@@ -165,17 +165,17 @@ namespace Dungeon_Application
 
             } while (!exit);
 
-            //While exit is NOT TRUE, keep looping
+            
 
 
 
-            //Output the player's final score
+            
             Console.WriteLine("You defeated " + score + " monster" + ((score == 1) ? "." : "s."));
 
         }//End Main
 
 
-        //Create GetRoom() & plug it in to the TODO above
+        
         private static string GetRoom()
         {
             string[] rooms =
