@@ -14,7 +14,7 @@ namespace Dungeon_Application
         static void Main(string[] args)
         {
             Console.Title = "POKEMON vs. CELEBRITIES WE HATE";
-            Console.WriteLine("Your journey begins...\n");
+            Console.WriteLine("Let the games begin!\n");
 
             int score = 0;
 
@@ -23,7 +23,7 @@ namespace Dungeon_Application
             Weapon wigSnatcher = new Weapon(1, 8, "Wig Snatcher", 11
                 );
 
-            Player player = new Player("Pikachu", 10, 11, 7, 7, Race.ElectricPokemon, wigSnatcher);
+            Player player = new Player("Pikachu", 10, 10, 7, 7, Race.ElectricPokemon, wigSnatcher);
 
 
             //Console.Clear();\
