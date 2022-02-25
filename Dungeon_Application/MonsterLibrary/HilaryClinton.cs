@@ -32,7 +32,7 @@ namespace MonsterLibrary
             HitChance = 20;
             Block = 20;
             MinDamage = 1;
-            Description = "There she goes, planning a war again...";
+            Description = "Check to see if she's planning a war!";
             IsWarPlanning = false;
         }
 

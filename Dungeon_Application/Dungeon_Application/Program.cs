@@ -20,9 +20,10 @@ namespace Dungeon_Application
 
 
             
-            Weapon wigSnatcher = new Weapon(1, 8, "Wig Snatcher", 10);
+            Weapon wigSnatcher = new Weapon(1, 8, "Wig Snatcher", 11
+                );
 
-            Player player = new Player("Pikachu", 5, 3, 7, 7, Race.ElectricPokemon, wigSnatcher);
+            Player player = new Player("Pikachu", 10, 11, 7, 7, Race.ElectricPokemon, wigSnatcher);
 
 
             //Console.Clear();\
